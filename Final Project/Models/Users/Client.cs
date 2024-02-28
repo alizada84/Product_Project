@@ -10,9 +10,14 @@ public class Client : Person
         get => _id;
         set => _id = value;
     }
+    public uint Balance { get; set; }
+    public DateTime BirthDate { get; set; }
 
-    public Client(string username, string password) : base(username, password)
+    public Client(string username, string password, DateTime birthDate, uint balance) : base(username, password)
     {
         Id = id_num++;
+
+        BirthDate = birthDate;
+        Balance = balance;
     }
 }

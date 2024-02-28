@@ -12,15 +12,18 @@ public class Product
     }
 
     string _name;
-
     public string Name
     {
         get => _name;
         set => _name = value;
     }
+    public uint count { get; set; }
+    public uint balance { get; set; }
 
-    public Product(string name)
+    public Product(string name, uint count, uint balance)
     {
         Id = id_num++;
+        this.count = count;
+        this.balance = balance;
     }
 }
